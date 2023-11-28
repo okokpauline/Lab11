@@ -11,9 +11,13 @@
 
 <body>
     <h1>Reservation Request</h1>
+    <div id="tabs">
+        <div id="tab1" class="tab">General Information</div>
+        <div id="tab2" class="tab">Preferences</div>
+        <div id="tab3" class="tab">Contact Information</div>
+    </div>
     <form action="response.html" method="get" name="reservation_form" id="reservation_form">
-        <fieldset>
-            <legend>General Information</legend>
+        <fieldset id="tab1Content" class="tabContent">
             <div>
                 <label for="arrival_date">Arrival date:</label>
                 <input type="text" name="arrival_date" id="arrival_date" autofocus>
@@ -27,25 +31,24 @@
             <div>
                 <label>Adults:</label>
                 <select name="adults" id="adults">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>        		        		        		
-				</select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
             </div>
             <div>
                 <label>Children:</label>
                 <select name="children" id="children">
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>        		        		        		
-				</select>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
             </div>
         </fieldset>
-        <fieldset>
-            <legend>Preferences</legend>
+        <fieldset id="tab2Content" class="tabContent">
             <div>
                 <label>Room type:</label>
                 <input type="radio" name="room" id="standard" class="left" checked>Standard
@@ -61,8 +64,7 @@
                 <input type="checkbox" name="smoking" id="smoking">Smoking
             </div>
         </fieldset>
-        <fieldset>
-            <legend>Contact Information</legend>
+        <fieldset id="tab3Content" class="tabContent">
             <div>
                 <label for="name">Name:</label>
                 <input type="text" name="name" id="name">
@@ -85,8 +87,13 @@
                 <input type="submit" id="submit" value="Submit Request">
             </div>
             <div id="dialog" title="Cancellation Policies" style="display: none;">
-                <p>Notification of cancellation or arrival date change must be received more than three days (72 hours) prior to the confirmed arrival date for the reservation deposit to be refundable. Email notification is acceptable, and a cancellation
-                    confirmation will be sent to you. Failure to check-in on the scheduled arrival date will result in the cancellation of the reservation including any remaining nights, and the reservation deposit shall be forfeited.</p>
+                <p>Notification of cancellation or arrival date change must be received more than three days (72 hours)
+                    prior to the confirmed arrival date for the reservation deposit to be refundable. Email notification
+                    is acceptable, and a cancellation
+                    confirmation will be sent to you. Failure to check-in on the scheduled arrival date will result in
+                    the cancellation of the reservation including any remaining nights, and the reservation deposit
+                    shall be forfeited.</p>
+                    
             </div>
         </fieldset>
     </form>
